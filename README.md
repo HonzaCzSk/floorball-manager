@@ -1,56 +1,83 @@
-# Welcome to your Expo app 👋
+# 🏒 Floorball Manager *(pracovní název)*
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**Tvůj tým, tvé taktiky, tvoje vítězství.**
 
-## Get started
+Nativní mobilní/tabletová aplikace pro floorbalové trenéry a správu týmu, vyvíjená pro klub **Florbal Hradec Králové**. Cílem je jednoduchý a přehledný nástroj pro plánování taktiky, správu soupisky a přípravu na zápasy — bez zbytečné administrativy.
 
-1. Install dependencies
+> Estetické motto projektu: *„nádherně jednoduché"*
 
-   ```bash
-   npm install
-   ```
+---
 
-2. Start the app
+## ✨ Klíčové moduly
 
-   ```bash
-   npx expo start
-   ```
+| Modul | Popis |
+| --- | --- |
+| 🎯 **Taktická tabule** | Hlavní modul aplikace — kreslení herních situací, formací a taktik pomocí Apple Pencil nebo prstu |
+| 📋 **Soupiska** | Správa hráčů týmu (ruční zadávání, role, čísla dresů) |
+| 🔍 **Soupeři** | Poznámky a taktiky k soupeřícím týmům |
+| 👥 **Přehled sestavy** | Aktivní formace na hřišti + náhradníci |
 
-In the output, you'll find options to open the app in a
+Klub může spravovat **více týmů** (např. Muži A, Junioři), každý s vlastní soupiskou.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🛠️ Tech stack
 
-## Get a fresh project
+- **React Native** + **Expo** (TypeScript)
+- **Expo Router** pro navigaci
+- **react-native-skia** — kreslení na taktické tabuli (podpora tlaku a náklonu Apple Pencil)
+- **react-native-gesture-handler** — gesta a interakce
+- Bez účtů/přihlašování — data uložena **lokálně na zařízení**
+- Cloud sync (Google Drive) plánován jako rozšíření po MVP
 
-When you're ready, run:
+---
+
+## 📱 Podporované platformy
+
+Primárně vyvíjeno a testováno pro **iPad** (přes Expo Go), s ohledem na použití trenéry přímo na tréninku/zápase.
+
+Jazyky rozhraní: 🇨🇿 čeština / 🇬🇧 angličtina
+
+---
+
+## 🚀 Spuštění projektu
 
 ```bash
-npm run reset-project
+# Instalace závislostí
+npm install
+
+# Spuštění vývojového serveru
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Naskenuj QR kód aplikací **Expo Go** na iPadu/telefonu pro živý náhled s hot-reloadem.
 
-### Other setup steps
+---
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+## 📂 Struktura projektu
 
-## Learn more
+```src/
+├── app/            # Obrazovky a routing (Expo Router)
+├── components/     # Znovupoužitelné UI komponenty
+├── constants/      # Barvy, motivy, konstanty
+└── hooks/          # Vlastní React hooky
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+---
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## 🗺️ Roadmapa
 
-## Join the community
+- [x] Design domovské obrazovky (light/dark mode)
+- [ ] Implementace domovské obrazovky
+- [ ] Taktická tabule — kreslení, formace, formáty hřiště
+- [ ] Soupiska — CRUD hráčů
+- [ ] Soupeři — poznámky a taktiky
+- [ ] Nastavení — jazyk, motiv, logo klubu
+- [ ] Finální název aplikace
+- [ ] Cloud sync (post-MVP)
 
-Join our community of developers creating universal apps.
+---
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 📄 Licence
+
+Tento projekt je licencován pod **MIT licencí** — viz [LICENSE](./LICENSE)

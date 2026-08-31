@@ -37,6 +37,13 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "54065384-bd3d-48bc-ab24-d01e5c628ab8"
+      }
+    },
+    "owner": "floorball-manager"
   }
 }
