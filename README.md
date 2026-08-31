@@ -1,4 +1,4 @@
-# 🏒 Floorball Manager *(pracovní název)*
+# 🏒 Floorball Manager
 
 **Tvůj tým, tvé taktiky, tvoje vítězství.**
 
