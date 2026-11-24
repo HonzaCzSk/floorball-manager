@@ -35,8 +35,19 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
+
 example
 
 # generated native folders
 /ios
 /android
+
+# other
+__pycache__
+.env
+.next/build/*
+.next/cache/*
+.next/dev/*
+.next/standalone/*
+.next/static/*
+.vscode/
